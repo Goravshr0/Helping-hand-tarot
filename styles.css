@@ -1,0 +1,116 @@
+/* Global Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Dark professional background */
+  color: #f5c518; /* Golden text */
+  text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #1e1e1e; /* Dark grey for modern look */
+  padding: 15px 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #f5c518;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+/* Header Section */
+header {
+  background: url('tarot-bg.jpg') no-repeat center center/cover;
+  padding: 80px 20px;
+  color: white;
+}
+
+header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.2);
+}
+
+header p {
+  font-size: 1.3em;
+  opacity: 0.8;
+}
+
+/* Buttons */
+.btn {
+  background-color: #f5c518;
+  color: #121212;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #ffe066;
+}
+
+/* Main Content */
+main {
+  padding: 30px;
+}
+
+/* Forms & Inputs */
+input[type="date"],
+input[type="time"],
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  padding: 12px;
+  margin: 10px 0;
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid #f5c518;
+  background-color: #1e1e1e;
+  color: #f5c518;
+}
+
+button {
+  background-color: #f5c518;
+  color: #121212;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 10px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #ffe066;
+}
+
+/* Footer */
+footer {
+  background-color: #1e1e1e;
+  padding: 15px;
+  color: #f5c518;
+  font-size: 14px;
+}
