@@ -57,3 +57,54 @@ function logout() {
 
 // Export karo functions ko
 export { signUp, login, logout };
+
+// Firebase SDK import karo
+import { initializeApp } from "firebase/app";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
+
+// Tumhara Firebase Config (yahan apni Firebase ki details daalo)
+const firebaseConfig = {
+    apiKey: "TUMHARA_API_KEY",
+    authDomain: "helping-hand-tarot.firebaseapp.com",
+    projectId: "helping-hand-tarot",
+    storageBucket: "helping-hand-tarot.appspot.com",
+    messagingSenderId: "790794149976",
+    appId: "1:790794149976:web:20014462146857ee7b2a2d"
+};
+
+// Firebase Initialize karo
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+// Signup Function
+export function signUp(email, password) {
+    createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            alert("Signup Successful!");
+        })
+        .catch((error) => {
+            alert("Error: " + error.message);
+        });
+}
+
+// Login Function
+export function login(email, password) {
+    signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            alert("Login Successful!");
+        })
+        .catch((error) => {
+            alert("Error: " + error.message);
+        });
+}
+
+// Logout Function
+export function logout() {
+    signOut(auth)
+        .then(() => {
+            alert("Logout Successful!");
+        })
+        .catch((error) => {
+            alert("Error: " + error.message);
+        });
+}
