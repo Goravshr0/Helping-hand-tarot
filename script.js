@@ -49,3 +49,22 @@ function login() {
     alert("Invalid login details!");
   }
 }
+const tarotCards = [
+    { name: "The Fool", image: "fool.jpg" },
+    { name: "The Magician", image: "magician.jpg" },
+    { name: "The High Priestess", image: "high_priestess.jpg" },
+    { name: "The Empress", image: "empress.jpg" },
+    { name: "The Emperor", image: "emperor.jpg" },
+    { name: "The Lovers", image: "lovers.jpg" },
+    { name: "The Chariot", image: "chariot.jpg" },
+    { name: "The Hermit", image: "hermit.jpg" },
+    { name: "Wheel of Fortune", image: "wheel_of_fortune.jpg" },
+    { name: "The Sun", image: "sun.jpg" }
+];
+
+function drawTarot() {
+    let randomCard = tarotCards[Math.floor(Math.random() * tarotCards.length)];
+    document.getElementById("tarotImage").src = randomCard.image;
+    document.getElementById("cardName").innerText = `You got: ${randomCard.name}`;
+}
+
